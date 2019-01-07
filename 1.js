@@ -1,13 +1,12 @@
-document.getElementById('btn').onclick = sliderLeft;
-document.getElementById('btn-r').onclick = sliderRight;
+document.getElementById('btn_l').onclick = sliderLeft;
+document.getElementById('btn_r').onclick = sliderRight;
 
 var left = 0;
-var right = 0;
 function sliderLeft() {
     var p;
     p = document.getElementById('polosa');
     left = left - 256;
-    if (left < -768) {
+    if (left < -1280) {
         left = 0;
     }
     p.style.left = left + 'px';
@@ -16,9 +15,9 @@ function sliderLeft() {
 function sliderRight() {
    var p;
     p = document.getElementById('polosa');
-    right = right + 256;
-//    if (left < 768) {
-//        left = 0;
-//    }
-    p.style.left = left - right + 'px';
+    left = left + 256;
+    if (left === 256) {
+        left = -1280;
+    }
+    p.style.left = left + 'px';
 }

@@ -13,6 +13,9 @@ clear: both;
 
 #polosa {
     width: 2048px;
+	position: relative;
+	left: 0;
+	transition: all ease 1s;
 }
 
 #polosa img {
